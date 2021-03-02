@@ -35,6 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "start:test": "npx codeceptjs run --steps",
+    "start:test:chrome": "npx codeceptjs run -c codecept.chrome.conf.js",
+    "start:test:firefox": "npx codeceptjs run -c codecept.firefox.conf.js",
     "lint": "eslint --ext jsx --ext js src",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add -A CHANGELOG.md",
     "build-storybook": "build-storybook -s public",
