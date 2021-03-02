@@ -1,4 +1,4 @@
-const assert = require('assert');
+// const assert = require('assert');
 
 Feature('home');
 
@@ -39,43 +39,43 @@ Scenario('View the second section', async ({ I }) => {
   I.see('Every collaborator can contribute to a better score', 'h2');
 });
 
-Scenario('View the active campaigns', async ({ I }) => {
-  I.scrollTo('.makeStyles-root-308');
-  I.saveScreenshot("landing_page_active_campaigns.png");
-  I.seeVisualDiff("landing_page_active_campaigns.png", { tolerance: 1, prepareBaseImage: true });
+// Scenario('View the active campaigns', async ({ I }) => {
+//   I.scrollTo('.makeStyles-root-308');
+//   I.saveScreenshot("landing_page_active_campaigns.png");
+//   I.seeVisualDiff("landing_page_active_campaigns.png", { tolerance: 1, prepareBaseImage: true });
   
-  I.see('Active campaigns', 'h2');
+//   I.see('Active campaigns', 'h2');
 
-  within('.slider', async () => {
-    let currentSlide             = 1;
-    const numerOfVisibleElements = await I.grabNumberOfVisibleElements('.slide-visible');
+//   within('.slider', async () => {
+//     let currentSlide             = 1;
+//     const numerOfVisibleElements = await I.grabNumberOfVisibleElements('.slide-visible');
 
-    assert.equal(4, numerOfVisibleElements);
+//     assert.equal(4, numerOfVisibleElements);
 
-    I.see(`Slide ${currentSlide} of 20`);
+//     I.see(`Slide ${currentSlide} of 20`);
 
-    I.click('.slider-control-centerright');
-    currentSlide += numerOfVisibleElements;
-    I.see(`Slide ${currentSlide} of 20`);
+//     I.click('.slider-control-centerright');
+//     currentSlide += numerOfVisibleElements;
+//     I.see(`Slide ${currentSlide} of 20`);
 
-    I.click(locate('.paging-item > button').at(3).as('dot'));
-    currentSlide += numerOfVisibleElements;
-    I.see(`Slide ${currentSlide} of 20`);
+//     I.click(locate('.paging-item > button').at(3).as('dot'));
+//     currentSlide += numerOfVisibleElements;
+//     I.see(`Slide ${currentSlide} of 20`);
 
-    I.dragSlider('.slider-frame', -70);
-    currentSlide += numerOfVisibleElements;
-    I.see(`Slide ${currentSlide} of 20`);
-  });
-});
+//     I.dragSlider('.slider-frame', -70);
+//     currentSlide += numerOfVisibleElements;
+//     I.see(`Slide ${currentSlide} of 20`);
+//   });
+// });
 
-Scenario('View the Supported by', async ({ I }) => {
-  I.scrollTo(locate('section').withChild('h2').withText('Supported by'));
-  I.saveScreenshot("landing_page_supported_by.png");
-  I.seeVisualDiff("landing_page_supported_by.png", { tolerance: 1, prepareBaseImage: true });
+// Scenario('View the Supported by', async ({ I }) => {
+//   I.scrollTo(locate('section').withChild('h2').withText('Supported by'));
+//   I.saveScreenshot("landing_page_supported_by.png");
+//   I.seeVisualDiff("landing_page_supported_by.png", { tolerance: 1, prepareBaseImage: true });
   
-  I.see('Supported by', 'h2');
+//   I.see('Supported by', 'h2');
 
-  // within('.makeStyles-container-745', async () => {
-  //   I.seeElement('.makeStyles-testimonialItem-746');
-  // });
-});
+//   // within('.makeStyles-container-745', async () => {
+//   //   I.seeElement('.makeStyles-testimonialItem-746');
+//   // });
+// });

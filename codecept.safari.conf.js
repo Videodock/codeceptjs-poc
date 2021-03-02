@@ -9,9 +9,9 @@ exports.config = {
   output : './output',
   helpers: {
     Playwright: {
-      url    : 'https://trompa-campaign-manager.netlify.com',
+      url    : 'http://localhost:3000',
       show   : false,
-      browser: 'chromium',
+      browser: 'webkit',
     },
     ResembleHelper: {
       "require"         : "codeceptjs-resemblehelper",
