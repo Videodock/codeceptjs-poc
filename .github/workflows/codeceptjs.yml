@@ -12,6 +12,10 @@ jobs:
         browser:
           - chrome
           - firefox
+          - safari
+        exclude:
+          - os: windows-2019
+            browser: safari 
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
